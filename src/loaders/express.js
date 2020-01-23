@@ -3,15 +3,6 @@ const cors = require('cors');
 const routes = require('../api');
 
 module.exports = ({ app }) => {
-
-    app.get('/status', (req, res) => {
-        res.status(200).end();
-    });
-
-    app.head('/status', (req, res) => {
-        res.status(200).end();
-    });
-
     // Useful if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
     // It shows the real origin IP in the heroku or Cloudwatch logs
     app.enable('trust proxy');

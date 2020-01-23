@@ -5,7 +5,7 @@ async function startServer() {
     const app = express();
 
     // eslint-disable-next-line global-require
-    await loaders({expressApp: app});
+    await loaders({ expressApp: app });
 
     const port = process.env.PORT || 1337;
 

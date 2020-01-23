@@ -1,11 +1,15 @@
 const request = require('supertest');
 const startServer = require('../src/app.js');
 
+// eslint-disable-next-line no-undef
 describe('Test status', () => {
-    test('it should get 200 status', async () => {
-        let app = await startServer();
-        const response = await request(app).get('/status');
+    // eslint-disable-next-line no-undef
+    test('it should get 200 status', async (done) => {
+        const app = await startServer();
+        const response = await request(app).get('/api/status');
 
-        expect(response.statusCode).toBe(200)
-    })
-})
+        // eslint-disable-next-line no-undef
+        expect(response.statusCode).toBe(200);
+        done();
+    });
+});
