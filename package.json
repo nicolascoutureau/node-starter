@@ -4,7 +4,7 @@
   "description": "Simple node starter",
   "main": "index.js",
   "scripts": {
-    "watch" : "nodemon start.js",
+    "watch": "nodemon start.js",
     "start": "node start.js",
     "test": "PORT=1338 jest --detectOpenHandles"
   },
@@ -16,6 +16,7 @@
     "celebrate": "^11.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "jest": "^25.1.0",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
