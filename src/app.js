@@ -7,7 +7,7 @@ async function startServer() {
     // eslint-disable-next-line global-require
     await loaders({expressApp: app});
 
-    const port = process.env.port || 1337;
+    const port = process.env.PORT || 1337;
 
     app.listen(port, () => {
         console.log(`App listening on port ${port}`);

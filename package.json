@@ -4,8 +4,9 @@
   "description": "Simple node starter",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon start.js",
-    "test": "port=1338 jest --detectOpenHandles"
+    "watch" : "nodemon start.js",
+    "start": "node start.js",
+    "test": "PORT=1338 jest --detectOpenHandles"
   },
   "author": "nicolas.coutureau@gmail.com",
   "license": "ISC",
