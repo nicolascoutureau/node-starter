@@ -20,6 +20,8 @@ module.exports = {
      */
     databaseURL: process.env.MONGODB_URI,
 
+    databaseTestURL: process.env.MONGODB_TEST_URI,
+
     /**
      * Your secret sauce
      */

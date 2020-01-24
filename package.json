@@ -8,6 +8,10 @@
     "start": "node start.js",
     "test": "PORT=1338 jest --detectOpenHandles"
   },
+  "jest": {
+    "setupFilesAfterEnv": ["./tests/setup.js"],
+    "testEnvironment": "node"
+  },
   "author": "nicolas.coutureau@gmail.com",
   "license": "ISC",
   "dependencies": {
