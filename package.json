@@ -6,10 +6,12 @@
   "scripts": {
     "watch": "nodemon start.js",
     "start": "node start.js",
-    "test": "PORT=1338 jest --detectOpenHandles"
+    "test": "PORT=1338 jest --detectOpenHandles --forceExit"
   },
   "jest": {
-    "setupFilesAfterEnv": ["./tests/setup.js"],
+    "setupFilesAfterEnv": [
+      "./tests/setup.js"
+    ],
     "testEnvironment": "node"
   },
   "author": "nicolas.coutureau@gmail.com",
@@ -17,6 +19,7 @@
   "dependencies": {
     "@hapi/joi": "^17.1.0",
     "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
     "celebrate": "^11.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -28,6 +31,9 @@
     "mongoose-unique-validator": "^2.0.3"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
     "supertest": "^4.0.2"
   }
 }

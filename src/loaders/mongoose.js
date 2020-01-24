@@ -4,7 +4,7 @@ const config = require('../config');
 module.exports = async () => {
     let uri = config.databaseURL;
 
-    if(process.env.NODE_ENV === 'test'){
+    if (process.env.NODE_ENV === 'test') {
         uri = config.databaseTestURL;
     }
 

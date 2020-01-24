@@ -3,15 +3,6 @@ const cors = require('cors');
 const routes = require('../api');
 
 module.exports = ({ app }) => {
-
-    app.get('/status', (req, res) => {
-        res.status(200).end();
-    });
-
-    app.head('/status', (req, res) => {
-        res.status(200).end();
-    });
-
     // Useful if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
     // It shows the real origin IP in the heroku or Cloudwatch logs
     app.enable('trust proxy');
@@ -22,7 +13,8 @@ module.exports = ({ app }) => {
     app.use(cors());
 
     // Some sauce that always add since 2014
-    // "Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it."
+    // "Lets you use HTTP verbs such as PUT or DELETE
+    // in places where the client doesn't support it."
     // Maybe not needed anymore ?
     // eslint-disable-next-line global-require
     app.use(require('method-override')());
@@ -53,7 +45,7 @@ module.exports = ({ app }) => {
         }
         return next(err);
     });
-    app.use((err, req, res, next) => {
+    app.use((err, req, res) => {
         res.status(err.status || 500);
         res.json({
             errors: {

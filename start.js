@@ -1,4 +1,3 @@
-const startServer = require ('./src/app');
+const startServer = require('./src/app');
 
 startServer();
-
